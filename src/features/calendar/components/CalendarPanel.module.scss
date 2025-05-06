@@ -1,0 +1,45 @@
+.calendarPanel {
+  /* react-calendar 라이브러리 커스텀 */
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    font-family: inherit;
+    :global {
+      /* 월별 탭*/
+      .react-calendar__navigation {
+        display: block;
+        height: auto;
+        margin: 0;
+        padding: 15px 2.5rem;
+        border-bottom: 1px solid $gray06;
+        text-align: center;
+
+        button {
+          color: inherit;
+          font-weight: bold;
+        }
+      }
+
+      /* 캘릭터 */
+      .react-calendar__viewContainer {
+        padding: 2.5rem;
+        background-color: #fafafa;
+        .react-calendar__month-view {
+          padding: 2rem;
+          border: 1px solid $gray06;
+          border-radius: 8px;
+        }
+      }
+    }
+    abbr[title] {
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  }
+}

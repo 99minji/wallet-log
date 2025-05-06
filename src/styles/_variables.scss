@@ -11,9 +11,10 @@ $gray02: #79747e;
 $gray03: #a1a1a1;
 $gray04: #a4a1aa;
 $gray05: #adaeb8;
-$gray06: #dddddd;
-$gray07: #eeeeee;
-$gray08: #fafafa;
+$gray06: #d9d9d9;
+$gray07: #dddddd;
+$gray08: #eeeeee;
+$gray09: #fafafa;
 
 $red01: #ff472e;
 $red02: #ffc2ba;
@@ -33,27 +34,13 @@ $blue03: #e5f3ff;
 
 .container {
   max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   transition: all 1s ease;
   @include tablet {
     padding: 0 24px;
     @include mobile {
       padding: 0 16px;
     }
-  }
-}
-
-.layoutContainer {
-  min-height: calc(100vh - 91px - 160px - 120px);
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
-  padding-top: 6rem;
-  @include mobile {
-    min-height: calc(100vh - 71px - 230px - 80px);
-    padding-top: 2rem;
-    padding-bottom: 3rem;
   }
 }
 
