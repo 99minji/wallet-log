@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pretendard } from "@/styles/fonts";
 import "@/styles/globals.scss";
+import ReduxProvider from "@/components/providers/ReduxProvider";
 
 export const metadata: Metadata = {
   title: "wallet-log",
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.variable}`}>{children}</body>
+      <body className={`${pretendard.variable}`}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }
