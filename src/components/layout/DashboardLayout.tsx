@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./DashboardLayout.module.scss";
 import CalendarPanel from "@/features/calendar/components/CalendarPanel";
+import Sidebar from "../sidebar/Sidebar";
+import TotalSide from "../sidebar/TotalSide";
 
 export default function DashboardLayout() {
   return (
@@ -14,8 +16,9 @@ export default function DashboardLayout() {
         </main>
       </section>
       <section className={s.listArea}>
-        <div>우측리스트</div>
-        <div>총합</div>
+        <h3>Side</h3>
+        <Sidebar />
+        <TotalSide />
       </section>
     </section>
   );
