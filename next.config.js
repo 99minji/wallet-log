@@ -4,6 +4,9 @@ const path = require("path");
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")],
-    prependData: `@use 'variables' as *;`,
+    additionalData: `
+    @import "_variables";
+    @import "_mixins";
+    `,
   },
 };
