@@ -1,0 +1,59 @@
+.sidebar_box {
+    max-height: 75vh;
+    overflow-y: scroll;
+    padding: 0 0 10%;
+    .date_group {
+        margin: 13px 0;
+        padding: 5px 7px;
+        border-radius: 8px;
+        background-color: #f5f4f4;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        .date_title {
+            margin:5px 0 3px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .daily_box {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            column-gap: 1rem;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            & > * {
+                font-size: 13px;
+            }
+
+            .type {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                text-indent: -9999px;
+
+                &.income {
+                    background-color: $income;
+                }
+                &.expense {
+                    background-color: $expense;
+                }
+            }
+            .sort {
+                font-weight: 600;
+            }
+            .price {
+                font-weight: 500;
+                &.income {
+                    color: $income;
+                }
+            
+                &.expense {
+                    color: $expense;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.total_wrap {
+    > .total_title {
+        padding: 10px 0 5px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .inner {
+        margin: 5px 0;
+        padding: 8px;
+        background-color: #f5f4f4;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+        .sub_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+            padding: 8px 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            
+            .sub_title {
+                position: relative;
+                padding-left: 15px;
+                font-size: 13px;
+                font-weight: 500;
+
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                    content: '';
+                }
+            }
+            &.expense {
+                .sub_title {
+                    &::after {
+                        background-color: $expense;
+                    }
+                }
+                .sub_price {
+                    color: $expense;
+                }
+            }
+            &.income {
+                .sub_title {
+                    &::after {
+                        background-color: $income;
+                    }
+                }
+                .sub_price {
+                    color: $income;
+                }
+            }
+            .sub_price {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        .total_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0 5px;
+            padding: 15px 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        
+            .total_title {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        
+            .total_price {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+}
