@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ReactNode, useEffect } from "react";
+import s from "./CommonModal.module.scss";
 
 type CommonModalProps = {
   isOpen: boolean;
@@ -22,9 +23,10 @@ export default function CommonModal({ isOpen, onClose, children }: CommonModalPr
   if (!isOpen) return null;
 
   return (
-    <div onClick={onClose}>
-      <button onClick={onClose}>닫기</button>
-      {children}
+    <div className={s.overlay} onClick={onClose}>
+      <div className={s.contents} onClick={(e) => e.stopPropagation()}>
+        {children}
+      </div>
     </div>
   );
 }
