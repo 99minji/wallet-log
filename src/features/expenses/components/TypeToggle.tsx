@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./TypeToggle.module.scss";
+
 type TypeToggleProps = {
   type: "income" | "expense";
   onChange: (type: "income" | "expense") => void;

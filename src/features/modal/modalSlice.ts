@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   type: null,
+  date: null,
 };
 
 const modalSlice = createSlice({
@@ -9,8 +10,9 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
-      const { type } = action.payload;
+      const { type, date } = action.payload;
       state.type = type;
+      state.date = date;
     },
     closeModal: () => {
       return initialState;
