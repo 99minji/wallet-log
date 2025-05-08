@@ -1,0 +1,13 @@
+.toggleWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  & > button {
+    flex: 1;
+    font-size: 1.8rem;
+    &.active {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 32px;
+
+  & > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem 0.75rem 1rem;
+    border-radius: 6px;
+    background: $background;
+
+    .listInfo {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 80px 1fr 100px 2fr;
+      gap: 0.5rem;
+      align-items: center;
+
+      & > span {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.type {
+          font-weight: bold;
+          color: #fff;
+          background-color: $red02;
+          padding: 2px 8px;
+          border-radius: 4px;
+          text-align: center;
+          &.income {
+            background-color: $blue01;
+          }
+        }
+      }
+    }
+
+    .deleteBtn {
+      font-size: 1.2rem;
+      & button {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

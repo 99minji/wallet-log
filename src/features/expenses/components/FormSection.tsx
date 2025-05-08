@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Item } from "./ExpenseModalContent";
 import ItemList from "./ItemList";
+import s from "./FormSection.module.scss";
 
 type FormSectionProps = {
   type: "income" | "expense";
@@ -31,10 +32,10 @@ export default function FormSection({ type, items, setItems }: FormSectionProps)
   };
 
   return (
-    <div>
-      <div>
+    <div className={s.expenseForm}>
+      <div className={s.formSection}>
         <label>
-          카테고리:
+          <p>카테고리</p>
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
             <option value="">선택</option>
             <option>항목1</option>
@@ -44,16 +45,18 @@ export default function FormSection({ type, items, setItems }: FormSectionProps)
         </label>
 
         <label>
-          금액:
+          <p>금액</p>
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="0" />
         </label>
 
         <label>
-          메모:
-          <input value={memo} onChange={(e) => setMemo(e.target.value)} placeholder="내용 입력" />
+          <p>메모</p>
+          <textarea value={memo} onChange={(e) => setMemo(e.target.value)} placeholder="내용 입력" />
         </label>
 
-        <button onClick={handleAddItem}>+ 추가</button>
+        <button className={s.addBtn} onClick={handleAddItem}>
+          + 추가
+        </button>
       </div>
 
       {/* 리스트 */}

@@ -8,7 +8,7 @@ type TypeToggleProps = {
 
 export default function TypeToggle({ type, onChange }: TypeToggleProps) {
   return (
-    <div>
+    <div className={s.toggleWrap}>
       <button onClick={() => onChange("income")} className={`${type === "income" ? s.active : ""}`}>
         수입
       </button>
