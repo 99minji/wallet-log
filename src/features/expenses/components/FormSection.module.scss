@@ -19,7 +19,7 @@
       width: 100%;
       min-height: 48px;
       padding: 1rem 1.6rem;
-      border: 1px solid $gray07;
+      border: 1px solid $gray06;
       border-radius: 8px;
       outline: none;
       font-family:
@@ -46,12 +46,13 @@
 
     .addBtn {
       padding: 6px 0;
+      color: $black03;
       border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.1);
       font-size: 1.2rem;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        font-weight: 500;
+        color: #fff;
       }
     }
   }

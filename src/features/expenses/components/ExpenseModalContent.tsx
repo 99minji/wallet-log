@@ -42,8 +42,8 @@ export default function ExpenseModalContent() {
       {/* 공통 모달 버튼에서 완료/취소 버튼 사용 */}
       <ModalActionButtons
         actions={[
-          { label: "등록", onClick: handleSubmit },
-          { label: "취소", onClick: closeModal, variant: "cancel" },
+          { label: "등록", onClick: handleSubmit, type: "submit", variant: "fillButton", className: "colBtn" },
+          { label: "취소", onClick: closeModal, variant: "emptyButton", className: "colBtn" },
         ]}
       />
     </div>

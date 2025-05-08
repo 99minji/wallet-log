@@ -9,11 +9,11 @@ type TypeToggleProps = {
 export default function TypeToggle({ type, onChange }: TypeToggleProps) {
   return (
     <div className={s.toggleWrap}>
-      <button onClick={() => onChange("income")} className={`${type === "income" ? s.active : ""}`}>
-        수입
-      </button>
-      <button onClick={() => onChange("expense")} className={`${type === "expense" ? s.active : ""}`}>
+      <button onClick={() => onChange("expense")} className={`${type === "expense" ? s.active : ""}`} aria-label="지출">
         지출
+      </button>
+      <button onClick={() => onChange("income")} className={`${type === "income" ? s.active : ""}`} aria-label="수입">
+        수입
       </button>
     </div>
   );

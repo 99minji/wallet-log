@@ -4,9 +4,16 @@
   gap: 5px;
 
   & > button {
-    flex: 1;
-    font-size: 1.8rem;
+    padding: 6px 24px;
+    color: $gray02;
+    border: 1px solid $gray06;
+    border-radius: 24px;
+    font-size: 1.6rem;
+
     &.active {
+      color: #fff;
+      background-color: $yellow03;
+      border: 0;
       font-weight: 500;
     }
   }

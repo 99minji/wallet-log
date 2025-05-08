@@ -1,0 +1,30 @@
+.btnWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 32px;
+
+  .button {
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+    &.fillButton {
+      background-color: $yellow03;
+      color: #fff;
+    }
+
+    &.emptyButton {
+      background-color: transparent;
+      color: $black02;
+      border: 1px solid $gray06;
+    }
+
+    &.colBtn {
+      width: 50%;
+    }
+  }
+}

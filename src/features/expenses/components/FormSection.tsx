@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Item } from "./ExpenseModalContent";
 import ItemList from "./ItemList";
 import s from "./FormSection.module.scss";
+import { FaPlus } from "react-icons/fa6";
 
 type FormSectionProps = {
   type: "income" | "expense";
@@ -54,8 +55,8 @@ export default function FormSection({ type, items, setItems }: FormSectionProps)
           <textarea value={memo} onChange={(e) => setMemo(e.target.value)} placeholder="내용 입력" />
         </label>
 
-        <button className={s.addBtn} onClick={handleAddItem}>
-          + 추가
+        <button className={s.addBtn} onClick={handleAddItem} aria-label="추가">
+          <FaPlus />
         </button>
       </div>
 

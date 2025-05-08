@@ -14,16 +14,18 @@ export default function ItemList({ items, onDelete }: ItemListProps) {
       {items.map((item) => (
         <li key={item.id}>
           <div className={s.listInfo}>
-            <span className={`${s.type} ${item.type === "income" ? s.income : ""}`}>
-              {item.type === "income" ? "수입" : "지출"}
+            <span className={`${s.type} ${item.type === "expense" ? s.expense : ""}`}>
+              {item.type === "expense" ? "지출" : "수입"}
             </span>
-            <span>{item.category}</span>
-            <span>{item.amount}원</span>
+            <span className={s.category}>{item.category}</span>
+            <span className={`${s.amount} ${item.type === "expense" ? s.expense : ""}`}>
+              {item.amount.toLocaleString()} 원
+            </span>
             <span>{item.memo}</span>
           </div>
           <div className={s.deleteBtn}>
             {onDelete && (
-              <button onClick={() => onDelete(item.id)}>
+              <button onClick={() => onDelete(item.id)} aria-label="삭제">
                 <IoMdCloseCircleOutline />
               </button>
             )}
