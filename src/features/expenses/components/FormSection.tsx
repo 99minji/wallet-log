@@ -32,6 +32,7 @@ export default function FormSection({ type, items, setItems }: FormSectionProps)
     setMemo("");
   };
 
+  // TODO : 유효성 검사
   return (
     <div className={s.expenseForm}>
       <div className={s.formSection}>

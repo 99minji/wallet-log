@@ -28,17 +28,25 @@
         padding: 2.5rem;
         background-color: #fafafa;
         .react-calendar__month-view {
+          max-width: 1200px;
+          margin: 0 auto;
           padding: 2rem;
           border: 1px solid $gray06;
           border-radius: 8px;
+          background-color: #fff;
+
+          abbr[title] {
+            display: block;
+            padding: 5px 0;
+            font-size: 1.6rem;
+            text-decoration: none;
+          }
         }
       }
     }
-    abbr[title] {
-      text-decoration: none;
-    }
 
     button {
+      font-size: 1.2rem;
       cursor: pointer;
     }
   }
