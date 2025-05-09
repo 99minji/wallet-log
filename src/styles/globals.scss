@@ -1,6 +1,5 @@
-@import "reset";
-@import "mixins";
-@import "variables";
+@use "reset";
+@use "variables";
 
 html,
 body {
@@ -27,7 +26,8 @@ body {
     sans-serif;
   font-size: 62.5%;
   font-weight: 400;
-  @include mobile {
+
+  @include mixins.mobile {
     min-width: 375px;
   }
 }

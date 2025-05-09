@@ -1,0 +1,59 @@
+.expenseForm {
+  margin-top: 32px;
+
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & > label {
+      & > p {
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+      }
+    }
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 1rem 1.6rem;
+      border: 1px solid $gray06;
+      border-radius: 8px;
+      outline: none;
+      font-family:
+        var(--font-pretendard),
+        Pretendard,
+        -apple-system,
+        BlinkMacSystemFont,
+        system-ui,
+        Roboto,
+        "Helvetica Neue",
+        "Segoe UI",
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        "Malgun Gothic",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        sans-serif;
+      transition: all 0.3s ease-in-out;
+      &:focus {
+        border-color: #000;
+      }
+    }
+
+    .addBtn {
+      padding: 6px 0;
+      color: $black03;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

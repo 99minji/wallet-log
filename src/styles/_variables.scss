@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 // Colors
 $background: #fafafa;
@@ -39,9 +39,9 @@ $expense: #ee5353;
   max-width: 1200px;
   margin: 0 auto;
   transition: all 1s ease;
-  @include tablet {
+  @include mixins.tablet {
     padding: 0 24px;
-    @include mobile {
+    @include mixins.mobile {
       padding: 0 16px;
     }
   }

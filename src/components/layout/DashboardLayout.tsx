@@ -8,7 +8,6 @@ export default function DashboardLayout() {
   return (
     <section className={s.dashboard}>
       <section className={s.main}>
-        {/* <header className={s.header}>아마도 월별탭</header> */}
         <main>
           <section className={s.calendar}>
             <CalendarPanel />
