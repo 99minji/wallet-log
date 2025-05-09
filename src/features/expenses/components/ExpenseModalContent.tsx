@@ -3,6 +3,7 @@ import TypeToggle from "./TypeToggle";
 import FormSection from "./FormSection";
 import ModalActionButtons from "@/components/modal/ModalActionButtons";
 import { useModal } from "@/hooks/useModal";
+import addExpenses from "@/lib/server-actions/addExpenses";
 
 export type Item = {
   id: number;
@@ -19,15 +20,9 @@ export default function ExpenseModalContent() {
   const [items, setItems] = useState<Item[]>([]);
 
   // TODO: 서버 액션으로 만들기
-  const handleSubmit = () => {
-    const incomeTotal = items.filter((i) => i.type === "income").reduce((acc, cur) => acc + cur.amount, 0);
-    const expenseTotal = items.filter((i) => i.type === "expense").reduce((acc, cur) => acc + cur.amount, 0);
+  const handleSubmit = async () => {
+    await addExpenses(items);
 
-    console.log("🟢 수입 총액:", incomeTotal);
-    console.log("🔴 지출 총액:", expenseTotal);
-    console.log("📦 전체 항목 리스트:", items);
-
-    // TODO: Redux 저장 또는 달력에 반영
     closeModal();
   };
 
